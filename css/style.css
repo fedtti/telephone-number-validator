@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+:root {
+    --primary-background-color: white;
+               --primary-color: #1d2329;
+  --secondary-background-color: #009fdb;
+             --secondary-color: #686e74;
+  --highlight-background-color: #a1a4ab;
+       --highlight-valid-color: #2e7e24;
+     --highlight-invalid-color: #c70032;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100vh;
+  width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  align-items: center;
+  background-color: var(--primary-background-color);
+  color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  font: normal 400 1rem/1 'Poppins', sans-serif;
+  justify-content: center;
+}
+
+/* HEADER */
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4.8rem;
+  margin-bottom: 2.4rem;
+}
+
+/* CONTENTS */
+main {
+  width: 100%;
+}
+
+form {
+  background-color: var(--secondary-background-color);
+  padding: 1.6rem;
+  text-align: center;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+  margin: 0 auto;
+}
+
+label {
+  color: var(--primary-background-color);
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+input, button {
+  appearance: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+  outline: none;
+}
+
+input {
+  border: 0.1rem solid var(--secondary-color);
+  border-radius: 0.8rem;
+  color: var(--primary-color);
+  font-weight: 300;
+  height: 4.8rem;
+  margin: 1.6rem 0;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--highlight-background-color);
+}
+
+button {
+  background-color: var(--highlight-background-color);
+  border: none;
+  border-radius: 0.4rem;
+  color: var(--primary-background-color);
+  cursor: pointer;
+  padding: 0.6rem;
+  position: relative;
+}
+
+button:last-of-type {
+  margin-left: 1.6rem;
+}
+
+aside {
+  font-size: 1.2rem;
+  margin-top: 2.4rem;
+  text-align: center;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.valid {
+  color: var(--highlight-valid-color);
+}
+
+.invalid {
+  color: var(--highlight-invalid-color);
+}
+
+@media only screen and (min-width: 576px) {
+  input {
+    max-width: 54rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  button:first-of-type {
+    margin-left: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  input {
+    margin-left: 1.6rem;
+  }
+}
